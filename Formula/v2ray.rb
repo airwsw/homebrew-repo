@@ -8,49 +8,46 @@ class V2ray < Formula
   depends_on "go" => :build
 
   resource "apple-cn" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/apple-cn.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/apple-cn.txt"
   end
   resource "direct-list" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/direct-list.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/direct-list.txt"
   end
   resource "direct-tld-list" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/direct-tld-list.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/direct-tld-list.txt"
   end
   resource "geoip" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/geoip.dat"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
   end
   resource "geosite" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/geosite.dat"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
   end
   resource "gfw" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/gfw.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/gfw.txt"
   end
   resource "google-cn" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/google-cn.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/google-cn.txt"
   end
   resource "greatfire" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/greatfire.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/greatfire.txt"
   end
   resource "proxy-list" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/proxy-list.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-list.txt"
   end
   resource "proxy-tld-list" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/proxy-tld-list.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-tld-list.txt"
   end
   resource "reject-list" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/reject-list.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/reject-list.txt"
   end
-  # resource "rules" do
-  #   url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/rules.zip"
-  # end
   resource "win-extra" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/win-extra.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-extra.txt"
   end
   resource "win-spy" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/win-spy.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-spy.txt"
   end
   resource "win-update" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/win-update.txt"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-update.txt"
   end
 
   def install
@@ -104,9 +101,6 @@ class V2ray < Formula
     resource("reject-list").stage do
       pkgshare.install "reject-list.txt"
     end
-    # resource("rules").stage do
-    #   pkgshare.install "rules.zip"
-    # end
     resource("win-extra").stage do
       pkgshare.install "win-extra.txt"
     end
