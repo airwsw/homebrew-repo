@@ -40,9 +40,9 @@ class V2ray < Formula
   resource "reject-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/reject-list.txt"
   end
-  resource "rules" do
-    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/rules.zip"
-  end
+  # resource "rules" do
+  #   url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/rules.zip"
+  # end
   resource "win-extra" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202104112202/win-extra.txt"
   end
@@ -104,9 +104,9 @@ class V2ray < Formula
     resource("reject-list").stage do
       pkgshare.install "reject-list.txt"
     end
-    resource("rules").stage do
-      pkgshare.install "rules.zip"
-    end
+    # resource("rules").stage do
+    #   pkgshare.install "rules.zip"
+    # end
     resource("win-extra").stage do
       pkgshare.install "win-extra.txt"
     end
