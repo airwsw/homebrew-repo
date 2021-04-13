@@ -1,0 +1,49 @@
+name: Unattended Upgrades
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 30 22 * * *
+  push:
+    branches:
+      - main
+jobs:
+  upgrades:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      - name: Upgrade
+        run: |
+          pwd
+          cd ..
+          mkdir .cache
+          cd .cache
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/apple-cn.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/direct-list.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/direct-tld-list.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/gfw.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/google-cn.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/greatfire.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-list.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-tld-list.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/reject-list.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-extra.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-spy.txt
+          wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-update.txt
+          sha256sum ./*
+      - name: Commit files
+        run: |
+          pwd
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
