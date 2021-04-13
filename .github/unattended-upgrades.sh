@@ -37,3 +37,6 @@ FILENAME=reject-list.txt     patch_v2ray_rules_dat
 FILENAME=win-extra.txt       patch_v2ray_rules_dat
 FILENAME=win-spy.txt         patch_v2ray_rules_dat
 FILENAME=win-update.txt      patch_v2ray_rules_dat
+
+DATE=$(date +%Y%m%d)
+sed -i "s/^  revision .*$/  revision $DATE/g" Formula/v2ray.rb

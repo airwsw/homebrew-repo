@@ -1,6 +1,7 @@
 class V2ray < Formula
   url "https://github.com/v2fly/v2ray-core/archive/v4.37.3.tar.gz"
   sha256 "b5001622b8a67c4a8e57651ef0f9d23f20604b7a65a18db47e51c1e19c3be08a" # latest.tar.gz
+  revision 0
   head "https://github.com/v2fly/v2ray-core.git"
 
   bottle :unneeded
