@@ -8,7 +8,7 @@ get_latest_release() {
 
 patch_v2ray_core() {
     wget -P .cache/v2ray-core https://github.com/v2fly/v2ray-core/archive/$FILENAME
-    sed -i "s/^  url \"https://github.com/v2fly/v2ray-core/archive/.*\"$/  url \"https://github.com/v2fly/v2ray-core/archive/$FILENAME\"/g" Formula/v2ray.rb
+    sed -i "s/^  url \"https:\/\/github.com\/v2fly\/v2ray-core\/archive\/.*\"$/  url \"https:\/\/github.com\/v2fly\/v2ray-core\/archive\/$FILENAME\"/g" Formula/v2ray.rb
     SHA265SUM=$(sha256sum .cache/v2ray-core/$FILENAME | awk '{print $1}')
     sed -i "s/^  sha256 \".*\" # latest.tar.gz$/  sha256 \"$SHA265SUM\" # latest.tar.gz/g" Formula/v2ray.rb
     cat Formula/v2ray.rb | grep "# latest.tar.gz"
