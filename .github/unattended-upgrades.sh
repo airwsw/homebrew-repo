@@ -9,8 +9,8 @@ get_latest_release() {
 patch_v2ray_core() {
     wget -P .cache/v2ray-core https://github.com/v2fly/v2ray-core/archive/$FILENAME
     sed -i "s/^  url \"https:\/\/github.com\/v2fly\/v2ray-core\/archive\/.*\"$/  url \"https:\/\/github.com\/v2fly\/v2ray-core\/archive\/$FILENAME\"/g" Formula/v2ray.rb
-    SHA265SUM=$(sha256sum .cache/v2ray-core/$FILENAME | awk '{print $1}')
-    sed -i "s/^  sha256 \".*\" # latest.tar.gz$/  sha256 \"$SHA265SUM\" # latest.tar.gz/g" Formula/v2ray.rb
+    SHA256SUM=$(sha256sum .cache/v2ray-core/$FILENAME | awk '{print $1}')
+    sed -i "s/^  sha256 \".*\" # latest.tar.gz$/  sha256 \"$SHA256SUM\" # latest.tar.gz/g" Formula/v2ray.rb
     cat Formula/v2ray.rb | grep "# latest.tar.gz"
 }
 
@@ -18,8 +18,8 @@ FILENAME=$(get_latest_release v2fly/v2ray-core).tar.gz patch_v2ray_core
 
 patch_v2ray_rules_dat() {
     wget -P .cache/v2ray-rules-dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/$FILENAME
-    SHA265SUM=$(sha256sum .cache/v2ray-rules-dat/$FILENAME | awk '{print $1}')
-    sed -i "s/^    sha256 \".*\" # $FILENAME$/    sha256 \"$SHA265SUM\" # $FILENAME/g" Formula/v2ray.rb
+    SHA256SUM=$(sha256sum .cache/v2ray-rules-dat/$FILENAME | awk '{print $1}')
+    sed -i "s/^    sha256 \".*\" # $FILENAME$/    sha256 \"$SHA256SUM\" # $FILENAME/g" Formula/v2ray.rb
     cat Formula/v2ray.rb | grep "# $FILENAME"
 }
 
