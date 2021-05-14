@@ -1,6 +1,10 @@
 class V2rayRules < Formula
   version "202105132213"
 
+  url "https://github.com/Loyalsoldier/v2ray-rules-dat.git"
+
+  bottle :unneeded
+
   depends_on "v2ray"
 
   resource "apple-cn" do
