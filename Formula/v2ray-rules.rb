@@ -1,7 +1,7 @@
 class V2rayRules < Formula
   version "202105132213.tar.gz"
 
-  depends_on formula: "v2ray"
+  depends_on "v2ray"
 
   resource "apple-cn" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/apple-cn.txt"
