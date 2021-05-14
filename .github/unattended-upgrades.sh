@@ -11,7 +11,7 @@ patch_v2ray_rules_version() {
     cat Formula/v2ray-rules.rb | grep "# latest.tar.gz"
 }
 
-VERSION=$(get_latest_release Loyalsoldier/v2ray-rules-dat).tar.gz patch_v2ray_rules_version
+VERSION=$(get_latest_release Loyalsoldier/v2ray-rules-dat) patch_v2ray_rules_version
 
 patch_v2ray_rules_dat() {
     wget -P .cache/v2ray-rules-dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/$FILENAME
