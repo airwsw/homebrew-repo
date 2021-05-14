@@ -1,5 +1,5 @@
 class V2rayRules < Formula
-  version "202105132213.tar.gz"
+  version "202105132213"
 
   depends_on formula: "v2ray"
 
