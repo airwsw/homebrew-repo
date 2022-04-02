@@ -1,5 +1,5 @@
 class V2rayRules < Formula
-  version "202204012211"
+  version "202204022211"
 
   url "https://github.com/Loyalsoldier/v2ray-rules-dat.git"
 
@@ -13,7 +13,7 @@ class V2rayRules < Formula
   end
   resource "direct-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/direct-list.txt"
-    sha256 "e6ffb627a33496b85114046ad0deecbb56e96bbc005f96ac8aede95496368256" # direct-list.txt
+    sha256 "22bc9d2411451e201cd7a62a68d4408119c67b40ba47c7ca32eb714382d98734" # direct-list.txt
   end
   resource "direct-tld-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/direct-tld-list.txt"
@@ -25,7 +25,7 @@ class V2rayRules < Formula
   end
   resource "geosite" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
-    sha256 "1056630bb29f446fdb0c39881c04da08ae93841961999d860c28a592ce6ba296" # geosite.dat
+    sha256 "ba29972cdc00590cfdfae1a1b1785c9d7300323b83df6cdb3ff2d943f7b0c38e" # geosite.dat
   end
   resource "gfw" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/gfw.txt"
@@ -41,7 +41,7 @@ class V2rayRules < Formula
   end
   resource "proxy-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-list.txt"
-    sha256 "f1eb1c7451de47481c374cb2ef2830bc96822ab52499809ffa596c68a6fbcf1c" # proxy-list.txt
+    sha256 "7f2f906474eb1bec57a857c5c8a606addb41fa75e98d3769054ef1b5cc1940db" # proxy-list.txt
   end
   resource "proxy-tld-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-tld-list.txt"
@@ -49,7 +49,7 @@ class V2rayRules < Formula
   end
   resource "reject-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/reject-list.txt"
-    sha256 "98c42fe05665745256893cabfcf12763a93b6f8f2ecdb2664d1a9b7a043e2244" # reject-list.txt
+    sha256 "46e7ff56031ec5cd014b77fd26c197de13f7dde5f66d4903b7616b9ae6f927f3" # reject-list.txt
   end
   resource "win-extra" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-extra.txt"
