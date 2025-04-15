@@ -1,5 +1,5 @@
 class V2rayRules < Formula
-  version "202504142213"
+  version "202504152213"
 
   url "https://github.com/Loyalsoldier/v2ray-rules-dat.git"
 
@@ -25,7 +25,7 @@ class V2rayRules < Formula
   end
   resource "geosite" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
-    sha256 "df18eb1ca976a688cfc830485fea159652631de3db75bf0ecdbcf6ef5b83674f" # geosite.dat
+    sha256 "23eb72f8ed57dd8105be3f90387f18e7f3776adf73030b195d157703e9d91d08" # geosite.dat
   end
   resource "gfw" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/gfw.txt"
@@ -41,7 +41,7 @@ class V2rayRules < Formula
   end
   resource "proxy-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-list.txt"
-    sha256 "53b82260848baadb4dc5a9f8b792fdb1827a2cb4a65b496058a55d95f07d23ec" # proxy-list.txt
+    sha256 "982ac32e0ab70534d7a2555e923858742485de2cad0b014ed65f36eb25b0d798" # proxy-list.txt
   end
   resource "proxy-tld-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-tld-list.txt"
@@ -49,7 +49,7 @@ class V2rayRules < Formula
   end
   resource "reject-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/reject-list.txt"
-    sha256 "8e77cf9f6d08298e3b503891674d45ae85ce1eb507b95a888082b2e18d038532" # reject-list.txt
+    sha256 "5887ff56c5c80659dc1a9312a747bbde31be6d9560d3a207aa18effbde31cd26" # reject-list.txt
   end
   resource "win-extra" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-extra.txt"
