@@ -1,5 +1,5 @@
 class V2rayRules < Formula
-  version "202608112235"
+  version "202608122233"
 
   url "https://github.com/Loyalsoldier/v2ray-rules-dat.git"
 
@@ -13,7 +13,7 @@ class V2rayRules < Formula
   end
   resource "direct-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/direct-list.txt"
-    sha256 "" # direct-list.txt
+    sha256 "e7defaf653bf7fd54942d8a12e35885dc8026a70fe83f19b3d2e1c32f2f5d48c" # direct-list.txt
   end
   resource "direct-tld-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/direct-tld-list.txt"
@@ -25,7 +25,7 @@ class V2rayRules < Formula
   end
   resource "geosite" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
-    sha256 "c4d752f26ebbc278cc84a3525286efefdb4022c97e7e2ec5282602801a2c4430" # geosite.dat
+    sha256 "034f0bbbe3bf030c603a2b61cefb7d72c95eaa0aa3b1705edd71c9ef25f56847" # geosite.dat
   end
   resource "gfw" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/gfw.txt"
@@ -41,7 +41,7 @@ class V2rayRules < Formula
   end
   resource "proxy-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-list.txt"
-    sha256 "939965a074f2d28cfdbde0b88dd157bbe2b099edbf206e44c89692f21d13bb8d" # proxy-list.txt
+    sha256 "ca87bbf90e7435b90af8cbd32de5ea7714e309ffa3b50bb075063f3a824db9da" # proxy-list.txt
   end
   resource "proxy-tld-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/proxy-tld-list.txt"
@@ -49,7 +49,7 @@ class V2rayRules < Formula
   end
   resource "reject-list" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/reject-list.txt"
-    sha256 "5861e3d3029488fc7fe9b4cf150445b37beecb48578d35a99dc6ba6b500cecc9" # reject-list.txt
+    sha256 "129a49da25533615cddb69602093c42d7cd5e746f72d40bae77dc23a45e0009e" # reject-list.txt
   end
   resource "win-extra" do
     url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/win-extra.txt"
